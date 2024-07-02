@@ -63,14 +63,6 @@ addticket.addEventListener('click', () => {
       }
     }
     const req = new Data(shortDescription, fullDescription, nowDate);
-
-    /* let data = Array.from(createTicketForm.elements)
-      .filter(({ name }) => name)
-      .map(({ name, value }) => `${name}=${value}`)
-
-      data = `${data}&created=${encodeURIComponent(nowDate)}`;
-   console.log(data)
-      */
     try {
       fetch(url, {
         method: 'POST',
@@ -198,8 +190,8 @@ ticketPad.addEventListener('click', (e) => {
       document.querySelector('.create-ticket').remove();
     });
 
-    submitEdition.addEventListener('click', (x) => {
-      x.preventDefault();
+    submitEdition.addEventListener('click', (event) => {
+      event.preventDefault();
       tiсketCorrectValue.querySelector('.name').textContent = document.querySelector('.descriptionName').value;
       tiсketCorrectValue.querySelector('.name').dataset.fulldescription = document.querySelector('.fullDescriptionName').value;
 
