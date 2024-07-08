@@ -1,6 +1,6 @@
 const addticket = document.querySelector('.add-ticket');
 const ticketPad = document.querySelector('.ticket-pad');
-const url = 'http://localhost:1022';
+const url = 'https://html-hw-server.onrender.com/';
 let cancelAdd;
 let submitAdd;
 
